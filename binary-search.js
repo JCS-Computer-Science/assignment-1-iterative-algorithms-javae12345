@@ -7,7 +7,22 @@ function binarySearch(array, searchTerm) {
 	 ** repeat the above process for the subset of the array
 	 ** keep repeating with smaller and smaller subsets until you find the searchTerm
 	 */
-
+	let start = 0
+	let end = array.length - 1;
+	while(start<=end){
+		let mid = Math.floor((start+end)/2)
+		if(searchTerm == array[mid]){
+		return mid
+	} 
+	if(searchTerm > array[mid]){
+		start = mid+1
+		Math.floor(mid/2)
+	}
+	if(searchTerm < array[mid]){
+		end = mid-1
+		
+	}
+}
 	return null;
 }
 
